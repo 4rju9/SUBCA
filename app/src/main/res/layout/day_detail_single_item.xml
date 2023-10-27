@@ -1,0 +1,82 @@
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp">
+
+    <TextView
+        android:gravity="center"
+        android:layout_alignTop="@id/cvSingleItemDayDetails"
+        android:id="@+id/tvTimeDayDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="09:50"/>
+
+    <TextView
+        android:id="@+id/tvTitleCircle"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/tvTimeDayDetails"
+        android:layout_width="12sp"
+        android:layout_height="12sp"
+        android:background="@drawable/rounded_corner_three"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvTitleLine"
+        android:layout_below="@id/tvTitleCircle"
+        android:layout_alignBottom="@id/cvSingleItemDayDetails"
+        android:layout_toEndOf="@id/tvTimeDayDetails"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="3sp"
+        android:layout_height="match_parent"
+        android:background="@color/deepSkyBlue"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSingleItemDayDetails"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@id/tvTitleLine"
+        android:layout_height="140dp"
+        android:layout_width="match_parent"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginVertical="5dp"
+        android:layout_marginEnd="5dp">
+
+        <RelativeLayout
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.example.arjun.su_bca.Utils.LetterImageView
+                android:id="@+id/ivDayDetails"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/tvDayDetails"
+                android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_toEndOf="@id/ivDayDetails"
+                android:layout_centerVertical="true"
+                android:text="@string/tvDayDetails"
+                android:textSize="20sp"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

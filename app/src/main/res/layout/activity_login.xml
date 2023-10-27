@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signup.LoginActivity">
+
+    <EditText
+        android:id="@+id/loginActivityEmailEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_corner_two"
+        android:hint="@string/tvEmailLabel"
+        android:inputType="textEmailAddress"
+        android:padding="16dp"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@id/loginActivityPassEditText"
+        app:layout_constraintLeft_toRightOf="@id/GLV1start"
+        app:layout_constraintRight_toLeftOf="@id/GLV1end"
+        app:layout_constraintTop_toBottomOf="@id/GLH3" />
+
+    <EditText
+        android:id="@+id/loginActivityPassEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginActivityEmailEditText"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_corner_two"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@id/loginActivityLoginButton"
+        app:layout_constraintLeft_toRightOf="@id/GLV1start"
+        app:layout_constraintRight_toLeftOf="@id/GLV1end"
+        app:layout_constraintTop_toBottomOf="@id/loginActivityEmailEditText" />
+
+    <ImageView
+        android:id="@+id/signInIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/sign_in"
+        app:layout_constraintBottom_toTopOf="@id/GLH2"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toRightOf="@id/GLV1start"
+        app:layout_constraintRight_toLeftOf="@id/GLV1end"
+        app:layout_constraintTop_toBottomOf="@id/GLH1start" />
+
+    <ProgressBar
+        android:id="@+id/loginActivityProgressBar"
+        android:layout_width="24dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@id/GLV1start"
+        app:layout_constraintRight_toLeftOf="@id/GLV1end"
+        app:layout_constraintTop_toBottomOf="@id/loginActivityPassEditText" />
+
+    <TextView
+        android:id="@+id/tvLogin1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvHello"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvLogin2"
+        app:layout_constraintLeft_toRightOf="@id/GLV1start"
+        app:layout_constraintTop_toBottomOf="@+id/GLH2"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvLogin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signIn"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/GLH3"
+        app:layout_constraintLeft_toRightOf="@id/GLV1start"
+        app:layout_constraintTop_toBottomOf="@+id/tvLogin1" />
+
+
+    <TextView
+        android:id="@+id/tvForgotPasswordLoginActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/forgotPasswordButtonTxt"
+        android:textColor="@color/deepSkyBlue"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/GLV1start"
+        app:layout_constraintRight_toLeftOf="@id/GLV1end"
+        app:layout_constraintTop_toBottomOf="@id/barrier" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GLH1end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.93" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GLH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GLH3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.38" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="loginActivityLoginButton, loginActivityProgressBar"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GLV1start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GLV1end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GLH1start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginActivityLoginButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/deepSkyBlue"
+        android:text="@string/loginTxt"
+        android:textColor="@color/whiteSmoke"
+        android:textSize="15sp"
+        app:cornerRadius="100dp"
+        app:layout_constraintLeft_toRightOf="@id/GLV1start"
+        app:layout_constraintRight_toLeftOf="@id/GLV1end"
+        app:layout_constraintTop_toBottomOf="@id/loginActivityPassEditText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginActivityCreateAccountButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/createButtonTxt"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:cornerRadius="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/GLV1start"
+        app:layout_constraintRight_toLeftOf="@id/GLV1end"
+        app:strokeColor="@color/deepSkyBlue"
+        app:strokeWidth="1dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

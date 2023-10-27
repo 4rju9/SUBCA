@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteSmoke"
+    tools:context=".DeveloperActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GDH1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GDH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GDV1outside"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.40"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/gradient_background"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/GDH1">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GDV1inside"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.40"/>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/ToolbarDeveloperDetails"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextColor="@color/white"
+            android:theme="@style/ToolbarBlackArrow"/>
+
+        <TextView
+            android:id="@+id/tvDeveloperName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="@string/tvDeveloperName"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/GDV1inside"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivDeveloper"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginStart="20dp"
+        app:civ_border_width="3dp"
+        app:civ_border_color="@color/white"
+        android:src="@drawable/devloper_image"
+        app:layout_constraintTop_toBottomOf="@id/GDH1"
+        app:layout_constraintBottom_toBottomOf="@id/GDH1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/GDV1outside"/>
+
+    <TextView
+        android:id="@+id/tvDeveloperRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvDeveloperRole"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/GDH1"
+        app:layout_constraintLeft_toRightOf="@id/GDV1outside"
+        app:layout_constraintBottom_toTopOf="@id/tvDeveloperLocation"/>
+
+    <TextView
+        android:id="@+id/tvDeveloperLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvDeveloperLocation"
+        android:textSize="14sp"
+        android:textColor="@color/fadeWhite"
+        android:textAlignment="center"
+        app:layout_constraintRight_toRightOf="@id/tvDeveloperRole"
+        app:layout_constraintTop_toBottomOf="@id/tvDeveloperRole"
+        app:layout_constraintLeft_toLeftOf="@id/tvDeveloperRole"
+        app:layout_constraintBottom_toBottomOf="@id/ivDeveloper"/>
+
+    <TextView
+        android:id="@+id/tvDeveloprBio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvDeveloperBio"
+        android:textSize="13sp"
+        android:textColor="@color/fadeBlack"
+        app:layout_constraintTop_toBottomOf="@id/ivDeveloper"
+        app:layout_constraintLeft_toLeftOf="@id/ivDeveloper"
+        app:layout_constraintBottom_toTopOf="@id/GDH2"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDeveloper1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:dividerHeight="10dp"
+        tools:listitem="@layout/activity_developer_single_item"
+        android:divider="@null"
+        app:layout_constraintTop_toBottomOf="@id/GDH2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/followDeveloper">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/followDeveloper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvDeveloper1"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvDeveloperIcons1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:background="@color/colorAccent"
+            android:layout_marginVertical="8dp"
+            android:layout_marginHorizontal="8dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/cvDeveloperIcons2">
+
+            <ImageView
+                android:id="@+id/instagram"
+                android:layout_height="40dp"
+                android:layout_width="40dp"
+                android:src="@drawable/instagram"
+                android:layout_margin="8dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvDeveloperIcons2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:background="@color/colorAccent"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:layout_constraintLeft_toRightOf="@id/cvDeveloperIcons1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/cvDeveloperIcons3">
+
+            <ImageView
+                android:id="@+id/linkedin"
+                android:layout_height="40dp"
+                android:layout_width="40dp"
+                android:src="@drawable/linkedin"
+                android:layout_margin="8dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvDeveloperIcons3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:background="@color/colorAccent"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:layout_constraintLeft_toRightOf="@id/cvDeveloperIcons2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                android:id="@+id/hackerrank"
+                android:layout_height="40dp"
+                android:layout_width="40dp"
+                android:src="@drawable/hackerrank"
+                android:layout_margin="8dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
