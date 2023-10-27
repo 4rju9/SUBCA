@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminPanelOptions.NewManageTimeTable">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarNewManageTT"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:titleTextColor="@color/black"
+        android:background="@color/deepSkyBlue"/>
+
+    <TextView
+        android:id="@+id/GreetingNewManageTT"
+        android:layout_below="@id/toolbarNewManageTT"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textGuide1"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Greeting2NewManageTT"
+        android:layout_below="@id/GreetingNewManageTT"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textGuide2"
+        android:textSize="15sp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_below="@id/Greeting2NewManageTT"
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editDayManageTT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp"
+
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:hint="@string/hintDay"
+            android:background="@drawable/rounded_corner_two"/>
+
+        <EditText
+            android:id="@+id/editTimeManageTT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:hint="@string/hintTime"
+            android:background="@drawable/rounded_corner_two"/>
+
+        <EditText
+            android:id="@+id/editSubjectsManageTT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:hint="@string/hintTitleForSubjects"
+            android:background="@drawable/rounded_corner_two"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonAddSubsNewManageTT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/textAddSubject"
+            android:textColor="@color/black"
+            app:cornerRadius="10dp"
+            app:strokeColor="@color/deepSkyBlue"
+            app:strokeWidth="2dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonNextNewManageTT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/nextButton"
+            android:textColor="@color/black"
+            app:cornerRadius="10dp"
+            app:strokeColor="@color/deepSkyBlue"
+            app:strokeWidth="2dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
