@@ -1,5 +1,5 @@
 <p align="center">
-   <a href="https://github.com/4rju9/Smu"><img src="https://github.com/4rju9/Music-Verse/assets/63835760/edb8485f-6ce1-44fc-a8c3-8fd387a41152" alt="SMU"</a>
+   <a href="https://github.com/4rju9/SUBCA"><img src="https://github.com/4rju9/Music-Verse/assets/63835760/edb8485f-6ce1-44fc-a8c3-8fd387a41152" alt="SMU"</a>
    <br>
    <br>
 </p>
